@@ -1,0 +1,5 @@
+INDEX VERSION 1.126
+C:\javascript\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\569080178.index
+\js04\src
+C:\javascript\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3470187666.index
+\js02\src

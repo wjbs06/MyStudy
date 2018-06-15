@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//브라우저 객체 모델(BOM:Browser Object Model)
+	/*
+	1. window
+	2. history
+	3. location
+	4. navigator
+	5. screen
+	*/
+	var w=window.screen.width;
+	var h=window.screen.height;
+	var c=window.screen.colorDepth;
+	var w2=window.screen.availwidth;
+	var h2=window.screen.availheight;
+	console.log(w,h);
+	
+	function func01(){
+		window.open('http://naver.com','myframe');
+	}
+	function func02(){
+		//f.mobeBy(100,100);//상대이동
+		//f.mobeTo(300,300);//절대
+		//f.resizeBy(300,300);//(상대)크기
+		//f.resizTo(300,300);//(절대)
+		//window.scrollTo(0,0);
+		window.open('http://daum.net','myframe');
+	}
+</script>
+</head>
+<body>
+	<button onclick="func01();">새창열기</button>
+	<button onclick="func01();">다음으로 열기</button>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	function go(a){
+		//절대,상대
+		window.location.replace(a+".html");
+	}
+	function re(){
+		window.location.reload();
+	}
+</script>
+<body>
+	<button onclick="go('ex01');">ex01</button>
+	<button onclick="go('ex02');">ex02</button>
+	<button onclick="go('ex03');">ex03</button>
+	<input type="text">
+	<button onclick="re();">re</button>
+</body>
+</html>

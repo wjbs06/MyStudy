@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	//window.a 윈도우 객체를 항상 갖고 있다
+	a=100;
+	alert(a);
+	
+</script>
+<body>
+
+</body>
+</html>

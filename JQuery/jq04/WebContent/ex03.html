@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body{
+		width: 100%;
+	}
+	div{
+		width: 960px;
+		height: 320px;
+		overflow: hidden;
+	}
+	div>ul{
+		padding: 0px;
+	}
+	div>ul>li{
+		list-style: none;
+		float: left;
+	}
+</style>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+	var x=0;
+	var y=0;
+	var cnt=0;
+	$(document).ready(function(){
+		$('button').each(function(idx,ele){
+			$(ele).click(function(){
+				if(idx==0){
+					$('div>ul').animate({'margin-top':'0px'},1000);
+				}
+				if(idx==1){
+					console.log('1');
+					cnt++;
+					y=cnt*320;
+					if(cnt==1)cnt=0;
+					$('div>ul').animate({'margin-top':'-'+y+'px'},1000);
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li><img alt="main" src="imgs/big/img01.jpg"></li>
+			<li><img alt="main" src="imgs/big/img02.jpg"></li>
+			<li><img alt="main" src="imgs/big/img03.jpg"></li>
+			<li><img alt="main" src="imgs/big/img04.jpg"></li>
+			<li><img alt="main" src="imgs/big/img05.jpg"></li>
+			<li><img alt="main" src="imgs/big/img06.jpg"></li>
+		</ul>
+	</div>
+		<button>이전</button>
+		<button>이후</button>
+</body>
+</html>

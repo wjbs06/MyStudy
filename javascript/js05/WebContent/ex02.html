@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+	<div>
+		<img alt="img" src=img.outerHTML>
+		<img alt="img" src=img.outerHTML>
+		<img alt="img" src=img.outerHTML>
+	</div>
+	<script type="text/javascript">
+	
+	var num=1;
+	
+	var arr2=[1,2,3,4,5,6,7,8,9];
+	
+	function imgLoop4(){
+		var a=arr2.shift();
+		var b=arr2.shift();
+		var c=arr2.shift();
+		arr2.push(a);
+		arr2.unpush(b);
+		arr2.unpush(c);
+		imgItem(a,b,c);
+	}
+	function imgItem(a,b,c){
+		var img1=document.querySelectorAll("img")[0];
+		img1.src='imgs/img0'+a+'.jpg';
+		var img2=document.querySelectorAll("img")[1];
+		img2.src='imgs/img0'+b+'.jpg';
+		var img3=document.querySelectorAll("img")[2];
+		img3.src='imgs/img0'+c+'.jpg';
+	}
+	/* 
+	function imgLoop3(){
+		num++;
+		if(num==8){
+			imgItem(8,9,1);
+		}else if(num==9){
+			imgItem(9,1,2);
+			num=0;
+		}else{
+			
+		}
+	}
+	
+	function imgLoop(){
+		imgItem1(++num);
+		imgItem2(num+1);
+		if(num+2==9){
+			imgItem3(1);
+		}else if(num+2==10){
+			imgItem3(2);
+		}else{
+			imgItem3(num+2);
+		}
+	}
+	function imgItem1(num){
+		var img=document.querySelectorAll("img")[0];
+		img.src='imgs/img0'+num+'.jpg';
+	} 
+	function imgItem2(num){
+		var img=document.querySelectorAll("img")[1];
+		img.src='imgs/img0'+num+'.jpg';
+	}
+	function imgItem3(num){
+		var img=document.querySelectorAll("img")[2];
+		img.src='imgs/img0'+num+'.jpg';
+	}
+	*/
+	/* var arr=[
+	         'img01.jpg',
+	         'img02.jpg',
+	         'img03.jpg',
+	         'img04.jpg',
+	         'img05.jpg',
+	         'img06.jpg',
+	         'img07.jpg',
+	         'img08.jpg',
+	         'img09.jpg'
+	         ];
+	
+	function imgLoop2(){
+		var name=arr.shift();
+		arr.push(name);
+		var img=document.querySelector('img');
+		img.outerHTML='<img src="imgs/'+name+'"/>';
+	} */
+</script>
+</body>
+</html>

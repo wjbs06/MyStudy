@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+	var h1;
+	
+	function Obj(){
+		this.func=function(){
+			console.log('객체의 함수실행');
+		return this;
+		};
+	}
+	
+	window.onload=function(){
+		/* var obj=new Obj();
+		obj.func().func().func().func().func().func();
+		jQuery('h1').css('color','red').css('font-size','100px'); */
+		/* var ele='h1';
+		var h1=document.getElementsByTagName(ele)[0];
+		h1.setAttribute('style','color:red'); */
+		//jQuery('h1').css('color','red');
+		
+		/* function func01(){
+			console.log('func');
+		}
+		var $=jQuery;
+		$('h1').css('color','red');
+		$(func01); */
+		
+		$('ul').css('color','red');
+		$('.cl1').css('color','blue');
+		$('ul>.cl2').css('color','silver');
+		$('li:eq(4)').css('color','blue');//인덱스
+		$('li:nth-child(1)').css('color','yellow');//순서대로
+	};
+	
+</script>
+</head>
+<body>
+	<h1>DOM제어</h1>
+	<p>내용</p>
+	<h2>h2태그1</h2>
+	<p class="cl1">내용</p>
+	<h2>h2태그2</h2>
+	<p id="id01">내용</p>
+	<h2 class="cl1">h2태그3</h2>
+	<p>내용</p>
+	<h2 class="cl2">h2태그4</h2>
+	<ul>
+		<li>item1</li>
+		<li class="cl2">item1</li>
+		<li class="cl2">item1</li>
+		<li>item1</li>
+		<li>item1</li>
+	</ul>
+</body>
+</html>

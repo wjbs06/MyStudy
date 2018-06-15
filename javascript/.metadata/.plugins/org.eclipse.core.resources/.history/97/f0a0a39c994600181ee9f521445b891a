@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		string driver="oracle.jdbc.driver.OracleDriver";
+		String url="jdbc:oracle:thin:@203.236.209.220:1521:xe";
+	%>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	var arr;
+	arr=['a','ab','abc'];
+	var arr2=new Array(5);
+	
+	console.log('ea:'+arr2.length);
+	/* for(var i in arr){
+		console.log(arr[i]);
+	} */
+</script>
+<body>
+
+</body>
+</html>

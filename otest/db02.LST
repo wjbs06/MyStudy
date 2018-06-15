@@ -1,0 +1,5 @@
+SQL> ed db02
+
+SQL> get db02
+SP2-0160: "db02.sql"을 열 수가 없습니다.
+SQL> spool off

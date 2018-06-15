@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	var msg='java';
+</script>
+<script type="text/javascript">
+// 함수형-변수선언?,스코프?,함수정의&실행시점?
+//자료형
+//1.숫자타입(정수,실수)
+
+	var a=5;
+	alert(typeof a);
+
+/* 	var a=2;
+	//오토랩핑,언랩핑
+	if(msg=='java'){
+		alert('같다');
+	}else{
+		alert('다른다');
+	}
+ */
+ </script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//$('#target').load('ex02.html');
+		$.ajax('ex15.json?callback?',{
+			/*complete:function)(xhr,txt){
+				 console.log(xhr.readyState,xhr.status,txt);
+				console.log(xhr.responseText);
+				var h1=$(xhr.responseText).find('h1');
+				$('#target').html(h1); 
+			}*/
+			async:true,
+			type:'GET',//'GET'
+			//data:[{name:"id",value:"root"},{name:"pw",value:"abcd"}],
+			error:function(xhr,status,err,data){//xhr,status,errorThrown
+				console.log(status);
+				console.log(err);
+				console.log(typeof data);
+				console.log('실패');
+			},
+			//dataType:"json",
+			dataType:'jsonp',//jsonp 는 get방식
+			//jsonpCallback:"callback",
+			success:function(data){//data,status,xhr
+				//console.log($(data).children().childre().children().eq(2).text());
+				console.log(typeof data);
+				console.log(data);
+				var msg=$(data).filter('h1').html();
+				$('#target').html(msg);
+				
+				/* $('#target').html("<h2>"+data.root[0].num+"</h2>");
+				$('#target').append("<h2>"+data.root[0].name+"</h2>");
+				$('#target').append("<h2>"+data.root[1].num+"</h2>");
+				$('#target').append("<h2>"+data.root[1].name+"</h2>"); */
+				
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>ajax통신</h1>
+	<div id="target"></div>
+	<p>이상은 불러온 내용</p>
+</body>
+</html>

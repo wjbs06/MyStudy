@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<style type="text/css">
+	div{
+		width: 200px;
+		height: 200px;
+		background-color: yellow;
+	}
+	div>div{
+		width: 100px;
+		height: 100px;
+		background-color: blue;
+	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var msg=$('p').text('');
+		console.log(msg);
+		//$('div').html('<ol><li>menu1</li><li>menu2</li></ol>')
+		
+		var h2=$('<h2/>').text('msg');
+		$('div').html(h2);
+	};
+</script>
+</head>
+<body>
+	<h1>하위 노드제어</h1>
+	<p>하위노드에는 엘리먼트와 텍스트노드가 있음</p>
+	<div>
+		<div>
+		</div>
+	</div>
+	<ul>
+		<li>menu1</li>
+		<li>menu2</li>
+		<li>menu3</li>
+		<li>menu4</li>
+	</ul>
+</body>
+</html>

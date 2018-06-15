@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#target{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: absolute;
+	}
+</style>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('button').each(function(idx,ele){
+			$(ele).click(function(){
+			 	/* if(idx==0)$('#target').hide();
+				if(idx==1)$('#target').show();
+				if(idx==2)$('#target').toggle(); */
+				/* 
+				if(idx==0)$('#target').slideUp();
+				if(idx==1)$('#target').slideDown();
+				if(idx==2)$('#target').slideToggle();
+				
+				if(idx==0)$('#target').fadeUp();
+				if(idx==1)$('#target').fadeDown();
+				if(idx==2)$('#target').fadeToggle(); */
+				
+	
+				if(idx==0){
+					$('#target').animate({'left':'400px'},1000);
+				} 
+				if(idx==1){
+					$('#target').queue([]).stop();
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<button>숨김</button>
+	<button>보기</button>
+	<button>토글</button>
+	<div id="target"></div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<style type="text/css">
+	div{
+		width: 408px;
+		height: 136px;
+		overflow: hidden;
+	}
+	ul{
+		padding: 0px;
+		width: 1224px;		
+	}
+	ul>li{
+		list-style: none;
+		float: left;
+	}
+	ul>li>img{
+		width:136px; 
+		height: 136px;
+		/*border: 1px solid gray; */
+	}
+	div>ul{
+		animation-name: nextAni;
+		animation-duration: 12s;
+		animation-direction: alternate;
+	}
+	@keyframes nextAni{
+		from{
+			margin-left: 0px;
+		}
+		to{
+			margin-left: -186px;
+		}
+	}
+</style>
+<script type="text/javascript">
+	/* function loop(){
+		$('li').first().appendTo('ul');
+	} */
+	var toggle=false;
+
+	function ani(){
+		toggle=!toggle;
+		if(toggle){
+			$('ul').css('animation-play-state','paused');
+		}else{
+			$('ul').css('animation-play-state','running');
+		}
+		setTimeout(ani,1000);
+	}
+	$(document).ready(function(){
+		ani();
+		//loop();
+		//setInterval(loop,1000);
+	});
+</script>
+</head>
+<body>
+	<h1>케러셀 이미지 롤링2</h1>
+	<div>
+	<ul>
+		<li><img alt="img" src="imgs/img01.jpg"></li>
+		<li><img alt="img" src="imgs/img02.jpg"></li>
+		<li><img alt="img" src="imgs/img03.jpg"></li>
+		<li><img alt="img" src="imgs/img04.jpg"></li>
+		<li><img alt="img" src="imgs/img05.jpg"></li>
+		<li><img alt="img" src="imgs/img06.jpg"></li>
+		<li><img alt="img" src="imgs/img07.jpg"></li>
+		<li><img alt="img" src="imgs/img08.jpg"></li>
+		<li><img alt="img" src="imgs/img09.jpg"></li>
+	</ul>	
+	</div>
+</body>
+</html>

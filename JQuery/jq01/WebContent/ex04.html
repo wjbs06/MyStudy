@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+
+	window.onload=function(){
+		var ele=document.querySelector('form');
+		$('label:nth-child(1)').next().next().css('background-color','gray');
+		
+		var arr=$('label');
+		for(var i=0;i<arr.length;i++){
+			$(arr[i]).css('background-color','#'+(i+4)+i+'0000');
+		} 
+		$('input').each(function(){
+			//console.log('실행');
+			$(this).css('background-color','gray');
+		});
+	}
+</script>
+</head>
+<body>
+<h1>jQuery node방식 접근</h1>
+	<form action="">
+		<label for="id">id</label>
+		<input type="text" name="id" id="id"/>
+		<label for="pw">pw</label>
+		<input type="password" name="pw" id="pw"/>
+		<input type="radio" name="ra" id="ra1">
+		<label for="ra1">ra1</label>
+		<input type="radio" name="ra" id="ra2"/>
+		<label for="ra2">ra2</label>
+		<input type="checkbox" name="ch1" id="ch1">
+		<label for="ch1">ch1</label>
+		<input type="checkbox" name="ch2" id="ch2">
+		<label for="ch2">ch2</label>
+		<select>
+			<option>item1</option>
+			<option>item2</option>
+		</select>
+		
+		<button type="submit">submit</button>
+		<button type="reset">reset</button>
+	</form>
+</body>
+</html>

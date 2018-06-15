@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	//window.a 윈도우 객체를 항상 갖고 있다
+	func01();
+	
+	function func01(){
+		console.log('func01 run');
+	}
+	//var func02=function (){console.log('func02 run')};
+	(function (){console.log('func02 run')};)();
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+	var form;
+	window.onload=function(){
+		//$('#ra1').attr('checked','checked');
+		$('select').children().eq(3).prop('selected','selected');
+		//$('select').children().next().prop('selected','selected');
+		
+		form=document.querySelector('form');
+		form.onsubmit=function(){
+			var id=$('#id').val();
+			var pw=$('#pw').val();
+			var ra;
+			$('input[type="radio"]').each(function(idx,ele){
+				if($(ele).prop('checked')){
+					ra=$(ele).val();
+				}
+			});
+			var chk=[];
+			$('input[type="ckeckbox"]').each(function(){
+				if($(this).prop('checked'))chk.push($(this).val());
+			});
+			
+			//var select=$('select').val();
+			$('select>option').each(function(){
+				if($(this).prop('selected'))select=$(this).val();
+			})
+			
+			console.log('id:'+id);
+			console.log('pw:'+pw);
+			console.log('ra:'+ra);
+			console.log('chk:'+chk);
+			console.log('sel:'+select);
+			return false;
+		};
+	};
+</script>
+</head>
+<body>
+	<h1>DOM 속성 제어</h1>
+<form action="">
+<p>
+	<label for="id">id</label><input type="text" id="id"/>
+</p>
+<p>
+	<label for="pw">pw</label><input type="password" id="pw"/>
+</p>	
+<p>
+	<input type="radio" name="ra" id="ra1" value="ra1v"/><label for="ra1">ra1</label>
+	<input type="radio" name="ra" id="ra2" value="ra2v"/><label for="ra2">ra2</label>
+	<input type="radio" name="ra" id="ra3" value="ra3v"/><label for="ra3">ra3</label>
+</p>
+<p>
+	<input type="checkbox" name="ch" id="ch1" value="ch1v"><label for="ch1">ch1</label>
+	<input type="checkbox" name="ch" id="ch2" value="ch2v"><label for="ch2">ch2</label>
+	<input type="checkbox" name="ch" id="ch3" value="ch3v"><label for="ch3">ch3</label>
+</p>
+<p>
+	<select>
+		<option>item1</option>
+		<option>item2</option>
+		<option>item3</option>
+		<option>item4</option>
+	</select>
+</p>
+<p>
+	<input type="submit">
+	<input type="reset">
+</p>
+</form>
+</body>
+</html>

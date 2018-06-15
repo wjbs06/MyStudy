@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	h1,h1+form{
+		width: 400px;
+	}
+	h1,h1+form,form button{
+		margin: 20px auto;
+	}
+	form label{
+	display: inline-block;
+	width: 100px;
+	background-color: gray; 
+	}
+</style>
+</head>
+<body>
+	<div>
+		<h1>입력페이지</h1>
+		<form action="insert.jsp" onsubmit="return inputCheck();">
+		<div>
+			<label for="name">이름</label>
+			<input type="text" name="name" id="name"/>
+		</div>
+		<div>
+			<label for="pay">금액</label>
+			<input type="number" min="0" value="0" name="pay" id="pay"/>
+		</div>
+		
+		<button type="submit">입력</button>
+		</form>
+	</div>
+	<script type="text/javascript">
+	var form=document.firstElementChild.lastElementChild.firstElementChild.lastElementChild;
+	var inputName=form.firstElementChild.lastElementChild;
+	var inputPay=form.firstElementChild.nextElementSibling.lastElementChild;
+		function inputCheck(){
+			//console.log('name legnth:'+inputName.value.length);
+			//console.log('pay legnth:'+inputPay.value.length);
+			var result=alpaCheck(inputName.value);
+			console.log('result:'+result)
+			return false;
+		}
+		function alpaCheck(a){
+						
+		}
+		function suCheck(a){
+			for(var i=0;i<a.length;i++){
+				//console.log(pay.charCodeAt(i));//48~57
+				if(pay.charCodeAt(i)<48||pay.charCodeAt(i)>57){
+					return false;
+				}
+			}
+			return true;
+		}
+	</script>
+</body>
+</html>

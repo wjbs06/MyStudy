@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('button').each(function(idx,ele){
+			$(ele).click(function(){
+				if(idx==0)$('div').fadeOut({//slideUp,hide
+					duration: 3000,
+					easing: 'linear'//swing 가속 linear 일정'
+				});
+				if(idx==1)$('div').fadeIn({//'slow',); slideDown
+					duration:'slow',
+					complete:function(){
+						alert('다 보임');
+					}
+				});
+				if(idx==2)$('div').fadeToggle();
+			});
+		});
+	});
+</script>
+<style type="text/css">
+</style>
+</head>
+<body>
+	<button>숨김</button>
+	<button>보기</button>
+	<button>토글</button>
+	<div>
+	JSON(제이슨[1],JavaScript Object Notation)은 속성-값 쌍(arrtribute-value pairs)
+	</div>
+</body>
+</html>

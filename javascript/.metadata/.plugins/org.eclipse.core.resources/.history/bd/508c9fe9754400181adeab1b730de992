@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	function go(a){
+		window.location.replace(a+".html");
+	}
+</script>
+<body>
+	<button onclick="go();">naver</button>
+</body>
+</html>

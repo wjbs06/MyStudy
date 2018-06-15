@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="result.jsp">
+		<p>
+			sabun:<input type="text" name="sabun">
+		</p>
+		<p>
+			<button>추가</button>
+			file:<input type="file" name="file1">
+		</p>
+		<p>
+			<button>전송</button>
+		</p>
+	</form>
+	<script type="text/javascript">
+	</script>
+</body>
+</html>
