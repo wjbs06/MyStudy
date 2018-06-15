@@ -1,0 +1,44 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            div{
+                width: 260px;
+                height: 260px;
+            }
+            div>div{
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                border: 5px solid red;
+                float: left;
+                background-attachment: fixed;
+            }
+            div:first-child{
+                background-color: #cccccc;
+                border-top-left-radius: 100px;
+            }
+            div:first-child+div{
+                background-color: #aaaaaa;
+                border-top-right-radius: 100px;
+            }
+            div:first-child+div+div{
+                background-color: #999999;
+                border-bottom-left-radius: 100px;
+            }
+            div:first-child+div+div+div{
+                background-color: #666666;
+                border-bottom-right-radius: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+DEBUG main com.bit.test.TestDao - GuestVo [sabun=1111, name=test, nalja=null, pay=1000]
+INFO main com.bit.test.TestDao - GuestVo [sabun=1111, name=test, nalja=null, pay=1000]
+WARN main com.bit.test.TestDao - GuestVo [sabun=1111, name=test, nalja=null, pay=1000]
+ERROR main com.bit.test.TestDao - GuestVo [sabun=1111, name=test, nalja=null, pay=1000]
+FATAL main com.bit.test.TestDao - GuestVo [sabun=1111, name=test, nalja=null, pay=1000]

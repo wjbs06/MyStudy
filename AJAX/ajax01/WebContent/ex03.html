@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var div,msg;
+	window.onload=function(){
+		msg='초기값';
+		div=document.querySelector('div');
+		var xhr=new XMLHttpRequest();
+		xhr.onreadystatechange=function(){
+			/* 
+				통신상태(단계)
+				0: request 전시점
+				1: server서버접속시점
+				2: request 받을 시점
+				3: processing request 처리시점
+				4: request 종료후 response 응답이 준비된 시점
+				------------------------------
+				통신결과 status
+				200:정상
+				4xx:문서없음 404:없는메세지 405: 메서드 제공x
+				5xx: 문서존재,문법에러(500)
+				*/
+			if(xhr.readyState==4){
+				msg=xhr.responseText;
+			div.innerHTML=msg;
+			console.log(xhr.status);
+			}
+			
+		}
+		xhr.open('get','ex04.html',true);//method,url,[동기(false)||비동기(true)]
+		xhr.send();
+		
+	}
+</script>
+<body>
+	<h1>ex03 page</h1>
+	<p>비동기 통신으로 아래를 가져옴</p>
+	<div></div>
+	<p>위를 가져옴</p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<project>
+ 	<property name="msg1" value="메시지1"/>
+ 	<property name="msg2" value="메시지2"/>
+ 	<property name="msg3" value="메시지3"/>
+
+    <target name="ex01">
+	<echo>ex01메세지 출력-${msg1}</echo>
+    </target>
+    <target name="ex02">
+	<echo>ex02메세지 출력</echo>
+    </target>
+    <target name="ex03">
+	<echo>ex03메세지 출력</echo>
+    </target>
+</project>

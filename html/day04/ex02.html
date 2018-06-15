@@ -1,0 +1,179 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style>
+        @media screen and (max-width:1023px){
+            nav>div{
+                display: inline-block;
+                width: 80px;
+                height: auto;
+                background-color: gray;
+                border-radius: 10px;
+                float: right;
+            }
+            nav>div>span{
+                display: inline-block;
+                width: 50px;
+                height: 2px;
+                background-color: white;
+                margin: 0px 15px;;
+            }
+            nav>ul{
+/*                display: none;*/
+                padding: 0px;
+            }
+            nav>ul>li{
+                list-style: none;
+                border-bottom: 1px solid gray;
+            }
+            nav>ul>li>a{
+                text-decoration: none;
+                display: block;
+                height: 35px;
+            }
+            section>img{
+                width: 100%;
+            }
+            aside{
+                display: none;
+            }
+            footer{
+                background-color: gray;
+            }
+        }
+        @media screen and (min-width:1024px) and(max-width:1559px){
+            
+        header,nav,section,aside,footer{
+            display: block;
+        }
+        header{
+        }
+        header>h1{
+            height: 130px;
+            background-image: url(../imgs/logo.jpg);
+            background-repeat: no-repeat;
+            text-indent: -9999px;
+        }
+        nav{
+            background-color: #ccc;
+            overflow: hidden;
+        }
+        nav>ul{
+            padding: 0px;
+            width: 520px;            
+            margin: 0 auto;
+        }
+        nav>ul>li{
+            float: left;
+            background-color: gray;
+            list-style: none;
+            margin: 0px 5px;
+            width: 120px;
+        }
+        nav>ul>li>a{
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            text-decoration: none;
+            color: white;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+        }
+        nav>ul>li>a:visited,nav>ul>li>a:link{
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            text-decoration: none;
+            color: white;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+        }
+        nav>ul>li>a:hover,nav>ul>li>a:active{
+            background-color: red;
+            line-height: 78px;
+        }
+        section{
+            clear: both;
+            width: 70%;
+            float: left;
+        }
+        section>img{
+            width: 100%;
+        }
+        aside{
+            width: 30%;
+            float: left;
+        }
+        aside>a>img{
+            width: 200px;
+            display: block;
+            margin: 50px 10%;
+        }
+        footer{
+            clear: both;
+            background-color: gray;
+            text-align: center;
+        }
+        }
+        @media screen and (min-width:1600px){
+            body{
+                width: 1600px;
+            }
+            header,nav,section,aside,footer{
+                display: block;
+                margin: 0px auto;
+            }
+            header,nav,footer{
+                width: 1600px;
+            }
+            section{
+                width: 1200px;
+                float: left;
+            }
+            section{
+                width: 400px;
+                float: left;
+            }
+            footer{
+                clear: both;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>비트캠프</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+        </ul>
+        <div>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <section>
+        <h1>반응형 웹이란</h1>
+        <img src="../imgs/main.jpg" alt="main">
+        <p> HTML은 하이퍼텍스트 마크업 언어(HyperText Markup Language, 문화어: 초본문표식달기언어, 하이퍼본문표식달기언어)라는 의미의 웹 페이지를 위한 지배적인 마크업 언어다. HTML은 제목, 단락, 목록 등과 같은 본문을 위한 구조적 의미를 나타내는 것뿐만 아니라 링크, 인용과 그 밖의 항목으로 구조적 문서를 만들 수 있는 방법을 제 공한다.그리고 이미지와 객체를 내장하고 대화형 양식을 생성하는 데 사용될 수 있다.
+        HTML은 웹 페이지 콘텐츠 안의 꺾쇠 괄호에 둘러싸인 "태그"로 되어있는 HTML 요소 형태로 작성한다. HTML은 웹 브라우저와 같은 HTML 처리 장치의 행동에 영향을 주는 자바스크립트와 본문과 그 밖의 항목의 외관과 배치를 정의하는 CSS 같은 스크립트를 포함하거나 불러올 수 있다. HTML과 CSS 표준의 공동 책임자인 W3C는 명확하고 표상적인 마크업을 위하여 CSS의 사용을 권장한다.</p>
+    </section>
+    <aside>
+        <a href="www.naver.com"><img src="http://www.bloter.net/wp-content/uploads/2018/02/NAVER_CI_Green_thumb.png"></a>
+        <a href="www.daum.net"><img src="http://cfile4.uf.tistory.com/image/195B1B1C4C6F52B6339B15"></a>
+        <a href="www.google.com"><img src="https://www.google.co.kr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"></a>
+    </aside>
+    <footer>
+        <address>비트캠프 서울특별시</address>
+        Copyright@bitcamp
+    </footer>
+</body>
+</html>

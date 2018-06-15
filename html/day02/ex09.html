@@ -1,0 +1,75 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <style>
+            button{color: red;}
+            p{
+                border: 5px gray dotted;
+/*
+                border-bottom-color: gray;
+                border-bottom-style: double;
+                border-bottom-width: 1px;
+*/
+            }
+            input[name]{
+                border-color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>전달</h1>
+        <form>
+            <p>
+                <label for="id">id</label>
+                <input type="text" name="id" id="id"/>
+            </p>
+            <p>
+                <label for="pw">pw</label>
+                <input type="password" name="pw" id="pw"/>
+            </p>
+            <p>
+                <label for="su">su</label>
+                <input type="number" name="su" id="su"/>
+            </p>
+            <p>
+                <label for="su">date</label>
+                <input type="date" name="su" id="su"/>
+            </p>
+            <p>
+                <label for="su">time</label>
+                <input type="time" name="su" id="su"/>
+            </p>
+            <p>
+                <label for="su">특이</label>
+                <input type="datetime-local" name="su" id="su"/>
+            </p>
+            <p>
+                <label for="su">color</label>
+                <input type="color" name="su" id="su"/>
+            </p>
+            <p>
+                <label for="su">email</label>
+                <input type="email" name="su" id="su"/>
+            </p>
+            <p>
+                <label for="su">range</label>
+                <input type="range" name="su" id="su"/>
+            </p>
+            <p>
+                <label for="su">radio</label>
+                <input type="radio" name="su" id="su"/>
+            </p>
+            <p>
+                <label>선택</label>
+                <select name="sel" id="sel">
+                    <option>item1</option>
+                    <option>item2</option>
+                    <option>item3</option>
+                    <option>item4</option>
+                </select>
+            </p>
+            <button type="submit">전송</button>
+        </form>
+    </body>
+</html>

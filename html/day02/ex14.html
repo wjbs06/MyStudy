@@ -1,0 +1,94 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <style>
+            body{
+                width: 1024px;
+                margin: auto;
+            }
+            header,nav,section,aside,footer{
+                display: block;
+            }
+            nav{
+                background-color: #cccccc;
+                height: 50px
+            }
+            nav>ul{
+                padding: 0px;
+                width: 625px;
+                margin: auto;
+            }
+            nav>ul>li:first-child{
+                border-left: white solid 5px;
+            }
+            nav>ul>li{
+                border-right-color: white;
+                border-right-style: solid;
+                border-right-width: 5px;
+                float: left;
+                display: inline-block;
+                background-color: gray;
+                width: 150px;
+                height: 50px;
+                list-style: none;
+            }
+            nav>ul>li>a{
+                width: 150px;
+                height: 50px;
+                display: block;
+                text-decoration: none;
+                color: white;
+                text-align: center;
+                line-height: 50px;
+            }
+            section,aside{
+                float: left;
+            }
+            section{
+                width: 900px;
+            }
+            section>img{
+                width: 100%;
+            }
+            aside{
+                width: 124px;
+            }
+            aside>img{
+                width: 100%;
+                display: block;
+                
+            }
+            footer{
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img alt="logo" src="imgs/logo.jpg" />
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+            </ul>
+        </nav>
+        <section>
+            <img alt="main" src="imgs/main.jpg" width="100%" />
+            <h1>환영합니다</h1>
+        </section>
+        <aside>
+            <img src="imgs/logo.jpg" />
+            <img src="imgs/logo.jpg" />
+            <img src="imgs/logo.jpg" />
+        </aside>
+        <footer>
+            <address>비트캠프 주소</address>
+            
+            copyright@bitcamp
+        </footer>
+    </body>
+</html>
