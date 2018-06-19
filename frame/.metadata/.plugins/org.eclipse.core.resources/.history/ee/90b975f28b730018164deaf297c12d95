@@ -1,0 +1,30 @@
+package com.bit.spring02.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.validation.BindException;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.AbstractCommandController;
+
+import com.bit.spring02.model.GuestDao1;
+import com.bit.spring02.model.entity.GuestVo;
+
+public class Update2Controller extends AbstractCommandController{
+
+	@Override
+	protected ModelAndView handle(HttpServletRequest request,
+			HttpServletResponse response, Object command, BindException errors)
+			throws Exception {
+		ModelAndView mav=new ModelAndView();
+		
+		GuestVo bean=(GuestVo) command;
+		GuestDao1 dao=new GuestDao1();
+		int result=dao.UpdateOne(bean);
+		String viewName="redirect:/edit.bit?idx="+bean.getSabun();
+		mav.setViewName("redirect:/detail.bit?idx="+bean.getSabun());
+		return mav;
+	}
+
+
+}

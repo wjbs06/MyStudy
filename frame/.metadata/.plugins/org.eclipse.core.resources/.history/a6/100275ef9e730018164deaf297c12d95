@@ -1,0 +1,9 @@
+package com.bit.spring03.springJava;
+
+public class MyModule {
+	public void printHelloMoudule(){
+		HelloModule module=new HelloModule();
+		module.setMsg("¸Þ¼¼Áö");
+		module.print();
+	}
+}

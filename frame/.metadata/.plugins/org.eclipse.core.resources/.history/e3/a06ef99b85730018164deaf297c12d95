@@ -1,0 +1,14 @@
+package com.bit.spring02.controller;
+
+import org.w3c.dom.views.AbstractView;
+import org.w3c.dom.views.DocumentView;
+
+public class Update1Controller implements AbstractView {
+
+	@Override
+	public DocumentView getDocument() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,12 @@
+package com.bit.spring03.springJava;
+
+public class HelloModule {
+
+	private String msg;
+	
+	
+	
+	public void print(){
+		System.out.println(msg);
+	}
+}

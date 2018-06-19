@@ -1,0 +1,26 @@
+package com.bit.spring02.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.AbstractController;
+
+import com.bit.spring02.model.GuestDao1;
+
+public class Update1Controller extends AbstractController{
+
+	@Override
+	protected ModelAndView handleRequestInternal(HttpServletRequest req,
+			HttpServletResponse resp) throws Exception {
+		ModelAndView mav=new ModelAndView();
+		String idx= req.getParameter("idx");
+		
+		GuestDao1 dao=new GuestDao1();
+		
+		mav.setViewName("redirect:/detail.bit?idx=");
+		return mav;
+	}
+
+
+}

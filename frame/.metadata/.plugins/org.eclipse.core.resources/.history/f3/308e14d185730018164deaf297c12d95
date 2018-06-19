@@ -1,0 +1,8 @@
+package com.bit.spring02.controller;
+
+import org.springframework.web.servlet.mvc.AbstractController;
+
+public class Update1Controller extends AbstractController{
+
+
+}

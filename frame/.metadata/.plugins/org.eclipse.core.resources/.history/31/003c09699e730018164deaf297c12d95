@@ -1,0 +1,8 @@
+package com.bit.spring03.springJava;
+
+public class HelloModule {
+
+	public void print(){
+		System.out.println("hello Java");
+	}
+}

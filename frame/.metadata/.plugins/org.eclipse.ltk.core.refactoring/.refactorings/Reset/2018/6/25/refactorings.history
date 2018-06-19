@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Move &apos;rank.jsp&apos; to &apos;WebContent&apos;" description="Move &apos;rank.jsp&apos; to &apos;WebContent&apos;" destination="WebContent" element1="WebContent/WEB-INF/rank.jsp" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1529385656942" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Reset/WebContent/rank.jsp&apos; to &apos;rank.html&apos;" description="Rename resource &apos;rank.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/rank.jsp" name="rank.html" stamp="1529385732154" updateReferences="true"/>
+</session>
