@@ -1,0 +1,9 @@
+package com.bit.spring04.springJava2;
+
+public class FrontModule {
+
+	public void started(){
+		Module01 module=new Module01();
+    	module.func1();
+	}
+}

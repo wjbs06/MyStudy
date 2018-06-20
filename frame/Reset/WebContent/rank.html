@@ -5,21 +5,27 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
- <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
- <script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/bootstrap.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
 
 <style type="text/css">
 	.container{
 		width: 100%;
-        height: 100%;
-        background-color: gray;
+        border: 1px solid rgb(217, 222, 232);
+        /*background-color: gray;*/
 	}
 	.contentsbox{
 		width: 90%;
-		height: 140px;
-        background-color: blue;
+		height: 142px;
+        /*background-color: blue;*/
         margin: 0px auto;
 	}
     .box{
@@ -28,7 +34,7 @@
     .numbox{
         width: 10%;
         height: 100%;
-        background-color: aqua;
+        /*background-color: aqua;*/
         
     }
     .numbox>div{
@@ -38,7 +44,7 @@
     .imgbox{
         width: 20%;
         height: 100%;
-        background-color: blueviolet;
+        /*background-color: blueviolet;*/
         
     }
     .imgbox>img{
@@ -47,7 +53,7 @@
     .conbox{
         width: 70%;
         height: 100%;
-        background-color: forestgreen;
+        /*background-color: forestgreen;*/
     }
     .conbox>p{
         margin-top: 30px;
@@ -55,15 +61,49 @@
     a{
         color: black;
     }
+    a:hover{
+        color: black;
+        text-decoration: none;
+    }
+    .textPoint{
+        color: rgb(135, 219, 219);
+    }
+    .conHead{
+        text-align: center;
+        border-bottom: 1px solid rgb(217, 222, 232);
+    }
+    .conHeadIn{
+        display: inline-block
+    }
+    .conHead>button{
+        float: right;
+        margin: 15px;
+    }
+    .conTitle{
+        border: 1px solid black;
+        border-radius: 50px;
+        text-align: center;
+        width: 100px;
+        margin: 10px auto 0px auto;
+    }
 </style>
 </head>
 <body>
+
 	<div class="container">
-	    <a href="rank_detail.html">
-	    
+	    <a href="rank-list.html">
+	    <div class="conHead">
+           <div class="conHeadIn">
+            <div class="conTitle">남성 랭킹</div>
+	        <p><span class="textPoint">남성</span>유저들이 뽑은 로션 랭킹</p>
+	       </div>
+	       <button type="button" class="btn btn-default" aria-label="Left Align">
+              <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+            </button>
+        </div>
 		<div class="contentsbox">
 			<div class="numbox box">
-			     <div style="width: 50px;background-color: wheat;">
+			     <div>
 			         <label>1</label>
 			     </div>
 			</div>
@@ -78,12 +118,7 @@
 			</div>
 		</div>
         </a>
-        <div class="panel panel-default">
-          <div class="panel-body">
-            Panel content
-          </div>
-          <div class="panel-footer">Panel footer</div>
-        </div>
+       
 	</div>
 </body>
 </html>

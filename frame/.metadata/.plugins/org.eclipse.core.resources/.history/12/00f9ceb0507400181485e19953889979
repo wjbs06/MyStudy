@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="dataSoure" class="org.apache.tomcat.dbcp.dbcp.BasicDataSource"></bean>
+
+<bean id="dao" class="com.bit.spring05.model.GuestDaoImf">
+	<property name="ds" ref="dataSource"></property>
+</bean>
+
+<bean id="handlerMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+	<property name="mappings">
+		<props>
+			<prop key="/index.bit">index</prop>
+			<prop key="/guest/list.bit">list</prop>
+			<prop key="/guest/detail.bit">detail</prop>
+		</props>
+	</property>
+</bean>
+
+<bean id="index" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+	<property name="viewName" value="index"></property>
+</bean>
+
+<bean id="list" class="com.bit.spring05.controller.ListController">
+	<property name="dao" ref="dao"></property>
+</bean>
+<bean id="detail" class="com.bit.spring05.controller.OneController">
+	<property name="dao" ref="dao"></property>
+</bean>
+
+
+<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix" value="/WEB-INF/view/"></property>
+	<property name="suffix" value=".jsp"></property>
+</bean>
+</beans>

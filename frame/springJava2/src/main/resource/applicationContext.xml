@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- applicationContext.xml -->
+	<bean id="md03" class="com.bit.spring04.springJava2.Module03">
+		<property name="alist">
+			<list>
+				<value>aaa</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="front" class="com.bit.spring04.springJava2.FrontModule">
+		<constructor-arg ref="moduleInter"></constructor-arg>
+	</bean>
+
+
+
+
+</beans>
+

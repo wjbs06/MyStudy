@@ -7,6 +7,10 @@
 	<item value="537" key="DIALOG_HEIGHT"/>
 	<item value="336" key="DIALOG_X_ORIGIN"/>
 	<item value="72" key="DIALOG_Y_ORIGIN"/>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/wjbs06/wjbs06.github.io.git"/>
+		<item value="https://github.com/wjbs06/note.git"/>
+	</list>
 	<list key="CommitDialog.authorValues">
 		<item value="wjbs06 &lt;wjbs06@gmail.com&gt;"/>
 	</list>
@@ -29,5 +33,7 @@
 		<item value="662" key="DIALOG_HEIGHT"/>
 		<item value="165" key="DIALOG_X_ORIGIN"/>
 		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="GitCommitMessageComponent">
 	</section>
 </section>

@@ -1,0 +1,9 @@
+package com.bit.spring05.model.entity;
+
+public class GuestVo {
+	private int sabun;
+	private String name;
+	private Date nalja;
+	private int pay;
+	
+}

@@ -1,0 +1,10 @@
+package com.bit.spring05.controller;
+
+
+import org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter;
+import org.springframework.web.servlet.mvc.SimpleFormController;
+
+public class AddController extends SimpleFormController{
+
+
+}

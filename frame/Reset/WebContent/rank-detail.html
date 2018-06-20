@@ -1,0 +1,110 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+ <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+ <script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js" ></script>
+<style type="text/css">
+    /* 전체 container */
+    .container{
+        border: 1px solid rgb(217, 222, 232);
+    }
+    
+    /* 상단 제품 정보 */
+    .contentsBoxImg{
+        width: 500px;
+        height: 500px;
+        display: inline;
+        background-color: gray;
+    }
+    .contentsBoxImg>img{
+        width: 500px;
+    }
+    .contentsBoxInfo{
+        width: 500px;
+        height: 500px;
+        float: right;
+        
+    }
+    .contentsBoxInfo>h4{
+        margin: 125px 0px 0px 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgb(217, 222, 232);
+    }
+    .brandImg{
+        width: 60px;
+    }
+    .table{
+        margin: 30px;
+        width: 200px;
+    }
+    .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+        border: 0px;
+        text-align: center;
+    }
+    /*  중단 평점 */
+    .avgBox{
+        width: 1000px;
+        height: 500px;
+        background-color: ghostwhite;
+        margin: 0px auto;
+    }
+    /*  하단 리뷰 */
+    .reviewBox{
+        width: 1000px;
+        height: 500px;
+        background-color: beige;
+        margin: 0px auto;
+    }
+</style>
+</head>
+<body>
+	<div class="container">
+        <div class="contentsInfoBox">
+            <div class="contentsBoxImg">
+                <img src="img/1483596722485.png">
+            </div>
+            <div class="contentsBoxInfo">
+                <h4>밀키 모이스춰라이저 하이드라 밸런싱</h4>
+                <table class="table">
+                    <tr>
+                        <td>용량</td>
+                        <td>125ml</td>
+                    </tr>
+                    <tr>
+                        <td>판매가격</td>
+                        <td>40,000원</td>
+                    </tr>
+                    <tr>
+                        <td>평점</td>
+                        <td>4.23 (490)</td>
+                    </tr>
+                    <tr>
+                        <td><img class="brandImg" src="img/1399638738628_720.png"></td>
+                        <td>빌리프</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="avgBox">
+            <p>점수</p>
+            <p>사진</p>
+            <img />
+        </div>
+        <div class="reviewBox">
+            <img />
+            <label>닉네임</label>
+            <label>나이</label>/<label>복합성</label>
+            <label>평점</label>/<label>날짜</label>
+            <p>좋은점</p>
+            <p>나쁜점</p>
+            
+        </div>
+	</div>
+</body>
+</html>

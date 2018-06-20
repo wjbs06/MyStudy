@@ -1,0 +1,16 @@
+package com.bit.spring05.controller;
+
+
+import org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter;
+import org.springframework.web.servlet.mvc.SimpleFormController;
+
+import com.bit.spring05.model.GuestDaoImf;
+
+public class AddController extends SimpleFormController{
+	private GuestDaoImf dao;
+	
+	public void setDao(GuestDaoImf dao) {
+		this.dao = dao;
+	}
+
+}

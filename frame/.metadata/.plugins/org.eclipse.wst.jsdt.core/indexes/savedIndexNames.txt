@@ -1,8 +1,4 @@
 INDEX VERSION 1.3+C:\Downloads\MyStudy\frame\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2649755259.index
 4032295366.index
-2340180454.index
-1524808561.index
-1767809148.index
-3966790137.index
-2749753719.index
+2270216528.index
+2682331111.index

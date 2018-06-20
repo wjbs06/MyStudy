@@ -1,0 +1,9 @@
+package com.bit.spring05.controller;
+
+
+import org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter;
+
+public class AddController extends SimpleControllerHandlerAdapter{
+
+
+}

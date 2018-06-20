@@ -1,0 +1,14 @@
+package com.bit.spring04.springJava2;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args ){
+    	//
+    	Module01 module=new Module01();
+    	module.func1();
+    }
+}

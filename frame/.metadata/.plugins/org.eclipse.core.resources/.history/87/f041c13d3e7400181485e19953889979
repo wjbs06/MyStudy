@@ -1,0 +1,11 @@
+package com.bit.spring05.model.entity;
+
+import java.sql.Date;
+
+public class GuestVo {
+	private int sabun;
+	private String name;
+	private Date nalja;
+	private int pay;
+	
+}
