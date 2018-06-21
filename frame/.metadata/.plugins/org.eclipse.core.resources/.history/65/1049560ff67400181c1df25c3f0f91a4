@@ -1,0 +1,5 @@
+package com.bit.spring06.model.entity;
+
+public class GuestVo {
+
+}

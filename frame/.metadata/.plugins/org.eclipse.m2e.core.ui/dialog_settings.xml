@@ -77,17 +77,20 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.bit.spring06.spring_step4"/>
 			<item value="com.bit.spring05.spring_step3"/>
 			<item value="com.bit.spring04.springJava2"/>
 			<item value="com.bit.struts2"/>
 			<item value="com.bit.struts2.struts_step6"/>
 		</list>
 		<list key="groupId">
+			<item value="com.bit.spring06"/>
 			<item value="com.bit.spring05"/>
 			<item value="com.bit.spring04"/>
 			<item value="com.bit.struts2"/>
 		</list>
 		<list key="artifactId">
+			<item value="spring-step4"/>
 			<item value="spring-step3"/>
 			<item value="springJava2"/>
 			<item value="struts-step6"/>

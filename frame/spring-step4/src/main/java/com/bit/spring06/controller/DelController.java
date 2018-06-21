@@ -1,0 +1,36 @@
+package com.bit.spring06.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.AbstractController;
+
+import com.bit.spring06.model.GuestDao;
+
+public class DelController extends AbstractController{
+	private GuestDao guestDao;
+	/*
+	 * 1.타입 필드명 일치
+	 * 2.타입(super o)x 필드명 일치
+	 * 3.타입o 필드명x
+	 * 4.타입(super o)x 필드명x
+	 * 
+	 * @Autowired 기본적으로 setter에 붙는다
+	*/
+	
+	@Autowired(required=true)
+	public void setGuestDao(GuestDao guestDao) {
+		this.guestDao = guestDao;
+	}
+	
+	@Override
+	protected ModelAndView handleRequestInternal(HttpServletRequest arg0,
+			HttpServletResponse arg1) throws Exception {
+		int sabun=Integer.parseInt(arg0.getParameter("idx"));
+		if(guestDao.deleteOne(sabun)>0)return new ModelAndView("redirect:/list.bit");
+		return new ModelAndView("redirect:/detail.bit?idx="+sabun);
+	}
+
+}

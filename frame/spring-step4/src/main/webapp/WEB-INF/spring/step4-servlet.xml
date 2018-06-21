@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- url mapping -->
+<bean id="handlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
+<!-- <bean name="/index.bit" class="com.bit.spring06.controller.DefaultController"></bean> -->
+<bean name="/index.bit" class="com.bit.spring06.controller.DefaultController" p:viewName="index" />
+<!-- <bean name="/list.bit" class="com.bit.spring06.controller.ListController">
+	<property name="guestDao" ref="guestDao"></property>
+</bean> -->
+<bean name="/list.bit" class="com.bit.spring06.controller.ListController" p:guestDao-ref="guestDao" />
+
+<bean name="/delete.bit" class="com.bit.spring06.controller.DelController"
+	p:supportedMethods="POST"
+/>
+<!-- view -->
+<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<property name="prefix" value="/WEB-INF/view/"></property>
+	<property name="suffix" value=".jsp"></property>
+</bean>
+
+</beans>

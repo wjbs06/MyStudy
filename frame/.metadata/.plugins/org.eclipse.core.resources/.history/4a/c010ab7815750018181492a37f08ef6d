@@ -1,0 +1,26 @@
+package com.bit.spring06.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.AbstractController;
+
+import com.bit.spring06.model.GuestDao;
+
+public class DelController extends AbstractController{
+	private GuestDao guestDao;
+	
+	public void setGuestDao(GuestDao guestDao) {
+		this.guestDao = guestDao;
+	}
+	
+	@Override
+	protected ModelAndView handleRequestInternal(HttpServletRequest arg0,
+			HttpServletResponse arg1) throws Exception {
+		int sabun=Integer.parseInt(arg0.getParameter("idx"))
+		guestDao.deleteOne(sabun);
+		return null;
+	}
+
+}

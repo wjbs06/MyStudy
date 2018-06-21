@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=spring-step3/C:\/Users\/11\/.m2\/repository\/org\/springframework\/spring-webmvc\/3.0.5.RELEASE\/spring-webmvc-3.0.5.RELEASE.jar&lt;org.springframework.web.servlet.mvc(AbstractController.class[AbstractController" modifiers="1057" timestamp="1529371064836"/>
-<typeInfo handle="=spring-step3/C:\/Users\/11\/.m2\/repository\/org\/springframework\/spring-webmvc\/3.0.5.RELEASE\/spring-webmvc-3.0.5.RELEASE.jar&lt;org.springframework.web.servlet.mvc(AbstractCommandController.class[AbstractCommandController" modifiers="1049633" timestamp="1529371064836"/>
-<typeInfo handle="=spring-step3/src\/main\/java&lt;com.bit.spring05.model{GuestDao.java[GuestDao" modifiers="513" timestamp="1529484201445"/>
+<typeInfo handle="=spring-step4/src\/main\/java&lt;com.bit.spring06.model{GuestDao.java[GuestDao" modifiers="513" timestamp="1529546178291"/>
 </typeInfoHistroy>
