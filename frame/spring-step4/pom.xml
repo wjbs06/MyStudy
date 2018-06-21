@@ -11,70 +11,59 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
-	<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->    <dependency> 
-        <groupId>org.springframework</groupId> 
-        <artifactId>spring-core</artifactId> 
-        <version>3.0.5.RELEASE</version> 
-    </dependency> 
-    <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans --> 
-    <dependency> 
-        <groupId>org.springframework</groupId> 
-        <artifactId>spring-beans</artifactId> 
-        <version>3.0.5.RELEASE</version> 
-    </dependency> 
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-jdbc</artifactId>
+	    <version>3.0.5.RELEASE</version>
+	</dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-webmvc</artifactId>
+	    <version>3.0.5.RELEASE</version>
+	</dependency>
     <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
 	<dependency>
 	    <groupId>javax.servlet</groupId>
 	    <artifactId>jstl</artifactId>
 	    <version>1.2</version>
 	</dependency>
-	<!-- https://mvnrepository.com/artifact/taglibs/standard -->
+    <!-- https://mvnrepository.com/artifact/taglibs/standard -->
 	<dependency>
 	    <groupId>taglibs</groupId>
 	    <artifactId>standard</artifactId>
 	    <version>1.1.2</version>
 	</dependency>
-	<!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+    <!-- https://mvnrepository.com/artifact/log4j/log4j -->
 	<dependency>
-	    <groupId>org.springframework</groupId>
-	    <artifactId>spring-webmvc</artifactId>
-	    <version>3.0.5.RELEASE</version>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>1.2.17</version>
 	</dependency>
 	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-<dependency>
-    <groupId>mysql</groupId>
-    <artifactId>mysql-connector-java</artifactId>
-    <version>8.0.11</version>
-</dependency>
-	<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
 	<dependency>
-	    <groupId>org.springframework</groupId>
-	    <artifactId>spring-jdbc</artifactId>
-	    <version>3.0.5.RELEASE</version>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>8.0.11</version>
 	</dependency>
-	<dependency>
-    <groupId>javax.servlet</groupId>
-    <artifactId>javax.servlet-api</artifactId>
-    <version>3.1.0</version>
-    <scope>provided</scope>
-</dependency>
-
+	
+    
   </dependencies>
   <build>
     <finalName>spring-step4</finalName>
-    <plugins> 
-        <plugin> 
-            <groupId>org.apache.maven.plugins</groupId> 
-            <artifactId>maven-compiler-plugin</artifactId> 
-            <version>3.0</version> 
-            <configuration> 
-                <target>1.7</target> 
-                <source>1.7</source> 
-            </configuration> 
-        </plugin> 
-    </plugins> 
-  </build> 
+    <plugins>
+    	<plugin>
+    		<groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-compiler-plugin</artifactId>
+		    <configuration>
+		    	<source>1.7</source>
+		    	<target>1.7</target>
+		    </configuration>
+    	</plugin>
+    </plugins>
+  </build>
 </project>

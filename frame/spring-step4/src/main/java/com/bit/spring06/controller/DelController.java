@@ -6,31 +6,33 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
+import org.springframework.web.servlet.mvc.Controller;
 
 import com.bit.spring06.model.GuestDao;
 
-public class DelController extends AbstractController{
-	private GuestDao guestDao;
-	/*
-	 * 1.íƒ€ìž… í•„ë“œëª… ì¼ì¹˜
-	 * 2.íƒ€ìž…(super o)x í•„ë“œëª… ì¼ì¹˜
-	 * 3.íƒ€ìž…o í•„ë“œëª…x
-	 * 4.íƒ€ìž…(super o)x í•„ë“œëª…x
-	 * 
-	 * @Autowired ê¸°ë³¸ì ìœ¼ë¡œ setterì— ë¶™ëŠ”ë‹¤
-	*/
+public class DelController extends AbstractController {
+	// 1. Å¸ÀÔ ÇÊµå¸í ÀÏÄ¡
+	// 2. Å¸ÀÔ(super O)x ÇÊµå¸í ÀÏÄ¡
+	// 3. Å¸ÀÔo  ÇÊµå¸í x
+	// 4. Å¸ÀÔ(super O)x ÇÊµå¸íx
 	
-	@Autowired(required=true)
+	// 1.@Autowired setter
+	// 2.@Autowired ÇÊµå»ó´Ü
+	
+	private GuestDao guestDao;
+
 	public void setGuestDao(GuestDao guestDao) {
 		this.guestDao = guestDao;
 	}
 	
 	@Override
-	protected ModelAndView handleRequestInternal(HttpServletRequest arg0,
-			HttpServletResponse arg1) throws Exception {
-		int sabun=Integer.parseInt(arg0.getParameter("idx"));
+	protected ModelAndView handleRequestInternal(HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		int sabun=Integer.parseInt(request.getParameter("idx"));
+		System.out.println(guestDao);
 		if(guestDao.deleteOne(sabun)>0)return new ModelAndView("redirect:/list.bit");
 		return new ModelAndView("redirect:/detail.bit?idx="+sabun);
 	}
+
 
 }

@@ -15,7 +15,7 @@ public class GuestDao01Imf implements GuestDao {
 	private DataSource dataSource;
 	private PreparedStatement pstmt;
 	private ResultSet rs;
-	
+
 	public void setDataSource(DataSource dataSource) {
 		this.dataSource = dataSource;
 	}
@@ -23,16 +23,16 @@ public class GuestDao01Imf implements GuestDao {
 	@Override
 	public List<GuestVo> selectAll() throws SQLException {
 		String sql="SELECT * FROM GUEST ORDER BY SABUN";
-		List<GuestVo> list=new ArrayList<GuestVo>();
+		List<GuestVo> list= new ArrayList<GuestVo>();
 		try(Connection conn=dataSource.getConnection()){
 			pstmt=conn.prepareStatement(sql);
 			rs=pstmt.executeQuery();
 			while(rs.next()){
 				list.add(new GuestVo(
-						rs.getInt("sabun"),
-						rs.getString("name"),
-						rs.getDate("nalja"),
-						rs.getInt("pay")
+						rs.getInt("sabun")
+						,rs.getString("name")
+						,rs.getDate("nalja")
+						,rs.getInt("pay")
 						));
 			}
 		}
