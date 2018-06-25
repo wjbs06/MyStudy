@@ -13,7 +13,6 @@ INDEX VERSION 1.127+C:\Downloads\MyStudy\frame\.metadata\.plugins\org.eclipse.jd
 4234380533.index
 422860019.index
 2228678406.index
-1031882368.index
 2688498321.index
 3234847126.index
 809137530.index
