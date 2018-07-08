@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+       <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
+        <title>Hello World</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+        <script type="text/javascript">
+            //jqueryMobile init configure
+            $.on('mobileinit',function(){
+                
+            });
+        </script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript">
+            function getList(){
+                $.ajax(){
+                    
+                }    
+            }
+            
+            $(document).ready(function(){
+                
+            });
+        </script>
+    </head>
+    <body>
+        <div id="home" data-role="page">
+            <div data-role="header">
+                <h1>메인 페이지</h1>
+            </div>
+            <div data-role="content">
+                <a href="#addpage" data-role="button">입력</a>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" class="ui-btn-active ui-state-persist" data-icon="home">Home</a></li>
+                        <li><a href="#listpage" data-icon="grid">List</a></li>
+                        <li><a href="#addpage" data-icon="edit">Add</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="listpage" data-role="page">
+            <div data-role="header" data-add-back-btn="true">
+                <h1>리스트 페이지</h1>
+            </div>
+            <div data-role="content">
+            
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+                        <li><a href="#listpage" class="ui-btn-active ui-state-persist" data-icon="grid">List</a></li>
+                        <li><a href="#addpage" data-icon="edit">Add</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="addpage" data-role="page">
+            <div data-role="header">
+                <h1>입력 페이지</h1>
+            </div>
+            <div data-role="content">
+            
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#home" data-icon="home">Home</a></li>
+                        <li><a href="#listpage" data-icon="grid">List</a></li>
+                        <li><a href="#addpage" class="ui-btn-active ui-state-persist" data-icon="edit">Add</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
