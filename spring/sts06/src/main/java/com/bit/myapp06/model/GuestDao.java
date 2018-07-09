@@ -9,7 +9,6 @@ public interface GuestDao {
 	
 	List<GuestVo> selectAll() throws SQLException;
 	GuestVo selectOne(int sabun) throws SQLException;
-	GuestVo insertOne(GuestVo bean) throws SQLException;
 	int updateOne(GuestVo bean) throws SQLException;
-	int deleteOne(int idx) throws SQLException;
+	int deleteOne(int sabun) throws SQLException;
 }

@@ -1,42 +1,77 @@
 <!DOCTYPE html>
-
 <html>
     <head>
-       <meta charset="UTF-8">
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
+        <meta charset="UTF-8">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css">
         <title>Hello World</title>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
-        <script type="text/javascript">
-            //jqueryMobile init configure
-            $.on('mobileinit',function(){
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+    var ev;
+function getList(){
+    
+    $.getJSON("http://203.236.209.193:8080/myApp/list.json",function(data){
+        var msg="";
+        $.each(data,function(idx,ele){
+            msg+="<li>";
+            msg+='<a href="">'ele.sabun+"</a>";
+            msg+="</li>";
+        });
+    });
+    /*$.ajax("http://203.236.209.193:8080/myApp/list.json",{
+         type: 'get',
+         dataType: 'json',
+         error:function(xhr,status,err){
+             alert("err:"+status);
+         },   
+         success:function(data){
+             console.log(data);
+             var arr=data.guests;
+             console.log(arr);
+             var msg="";
+             for(var i=0; i<arr.length; i++){
+             console.log(i);
+                msg+='<li><a href="';
+                msg+=arr[i].sabun+'">'+arr[i].name+'</a><span class="ui-li-count">'+arr[i].pay; 
+                msg+='</span></li>';
+             }
+             console.log(msg);
+             $('#list').html(msg);
+             $('#list').listview('refresh');
+         }   
+    });*/
                 
-            });
-        </script>
+}
+ function addList(){
+     var param=$("#addform").serialize();
+     $.post('http://203.236.209.193:8080/myApp/add',param,function(){
+         history.back();
+     });
+ }               
+    // jqueryMobile init configure
+    $(document).on('mobileinit',function(){
+        $.mobile.defaultPageTransition ="slide";
+        $(document).on("pageshow","#listpage", function(event) {
+					console.log("#listpage pageshow");
+            getList();
+				});
+        $(document).on('submit',"#addform",function(e){
+            e.preventDefault();
+            addList();
+        });
+    });
+</script>
         <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
-        <script type="text/javascript">
-            function getList(){
-                $.ajax(){
-                    
-                }    
-            }
-            
-            $(document).ready(function(){
-                
-            });
-        </script>
     </head>
     <body>
         <div id="home" data-role="page">
             <div data-role="header">
-                <h1>메인 페이지</h1>
+                <h1>메인페이지</h1>
             </div>
             <div data-role="content">
-                <a href="#addpage" data-role="button">입력</a>
+               <Button onclick="getList()" data-role="button">click</Button>
+                
             </div>
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
@@ -50,15 +85,19 @@
         </div>
         <div id="listpage" data-role="page">
             <div data-role="header" data-add-back-btn="true">
-                <h1>리스트 페이지</h1>
+                <h1>리스트페이지</h1>
             </div>
             <div data-role="content">
-            
+                <ul id="list" data-role="listview">
+                    <li><a href="#">name</a><span class="ui-li-count">pay</span></li>
+                </ul>
+                
+                
             </div>
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#home" data-icon="home">Home</a></li>
+                        <li><a href="#" data-icon="home">Home</a></li>
                         <li><a href="#listpage" class="ui-btn-active ui-state-persist" data-icon="grid">List</a></li>
                         <li><a href="#addpage" data-icon="edit">Add</a></li>
                     </ul>
@@ -66,16 +105,31 @@
             </div>
         </div>
         <div id="addpage" data-role="page">
-            <div data-role="header">
-                <h1>입력 페이지</h1>
+            <div data-role="header" data-add-back-btn="true">
+                <h1>입력페이지</h1>
             </div>
             <div data-role="content">
-            
+                <form method="post" action="#" id="addform">
+                  <div data-role="fieldcontain">
+                    <label for="sabun">sabun:</label>
+                    <input id="sabun" type="text" name="sabun"/> 
+                  </div>
+                  <div data-role="fieldcontain">
+                    <label for="name">Name:</label>
+                    <input id="name" type="text" name="name"/> 
+                  </div>
+                  <div data-role="fieldcontain">
+                    <label for="pay">pay:</label>
+                    <input id="pay" type="text" name="pay"/> 
+                  </div>
+                  <button type="submit">입력</button>
+                </form>
+                
             </div>
             <div data-role="footer" data-position="fixed">
                 <div data-role="navbar">
                     <ul>
-                        <li><a href="#home" data-icon="home">Home</a></li>
+                        <li><a href="#" data-icon="home">Home</a></li>
                         <li><a href="#listpage" data-icon="grid">List</a></li>
                         <li><a href="#addpage" class="ui-btn-active ui-state-persist" data-icon="edit">Add</a></li>
                     </ul>
@@ -84,3 +138,13 @@
         </div>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
